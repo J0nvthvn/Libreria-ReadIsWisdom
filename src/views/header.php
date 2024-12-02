@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📖 Read is Wisdom</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
     <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/font.css">
     <link rel="stylesheet" href="public/css/style.violet.css" id="theme-stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 
 </head>
@@ -23,6 +25,11 @@
                     </a>
                     <button class="sidebar-toggle"><i class="fas fa-bars"></i></button>
                 </div> 
+
+                <div class="right-menu list-inline no-margin-bottom">
+					<!-- Log out               -->
+					<div class="list-inline-item logout"> <a id="logout" href="salir.php" class="nav-link"> <span class="d-none d-sm-inline">Cerrar sessión </span><i class="icon-logout"></i></a></div>
+				</div>
                 
             </div>
         </nav>
@@ -78,8 +85,44 @@
 						</div>
 					</div>
 				</li>
+
+                <li class="nav-item">
+					<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProveedor" aria-expanded="true" aria-controls="collapseUtilities">
+						<i class="fas fa-hospital"></i>
+						<span>Proveedor</span>
+						<i class="fas fa-angle-down fa-lg float-right"></i>
+					</a>
+					<div id="collapseProveedor" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+						<div class="bg-white py-2 collapse-inner rounded">
+							<a class="collapse-item" href="registro_proveedor.php">Nuevo Proveedor</a>
+							<a class="collapse-item" href="lista_proveedor.php">Proveedores</a>
+						</div>
+					</div>
+				</li>
+
+                <li class="nav-item">
+					<a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseUsuarios" aria-expanded="true">
+						<i class="fas fa-user"></i>
+						<span>Usuarios</span>
+						<i class="fas fa-angle-down fa-lg float-right"></i>
+					</a>
+					<div id="collapseUsuarios" class="collapse">
+						<div class="bg-white py-2 collapse-inner">
+							<a class="collapse-item" href="registro_usuario.php">Nuevo Usuario</a>
+							<a class="collapse-item" href="lista_usuarios.php">Usuarios</a>
+						</div>
+					</div>
+				</li>
+
+                <li class="nav-item">
+					<a class="nav-link" href="configuracion.php" aria-expanded="true">
+						<i class="fas fa-tools"></i>
+						<span>Configuración</span>
+					</a>
+				</li>
+
             </ul>
         </nav>
-    </div>
-</body>
-</html>
+    
+        <div class="page-content">
+            <div class="page-header">
